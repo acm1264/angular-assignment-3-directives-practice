@@ -1,0 +1,9 @@
+<button
+(click)="HandleButtonClicked()"
+>Display Details</button>
+<!-- this paragraph will only display if the above button is 
+    clicked and the variable 'isDisplaying' is set true -->
+<p *ngIf="isDisplaying">Oh Goombers, my Goombers! You found me!</p>
+<p *ngFor="let clickValue of listOfClicks" 
+    [ngStyle]="{'background-color': getColor(clickValue)}"
+    [ngClass]="{'white-text-index': clickValue >= 5}">{{ clickValue }}</p>
